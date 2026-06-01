@@ -1,0 +1,54 @@
+{
+  "diary": {
+    "title": "投资日记",
+    "description": "记录投资经验，通过AI分析不断成长",
+    "write": {
+      "title": "写日记",
+      "date": "日期",
+      "market": "市场情况",
+      "trade": "交易详情",
+      "emotion": "情绪状态",
+      "lesson": "心得体会",
+      "plan": "未来计划",
+      "tags": "标签",
+      "save": "保存",
+      "edit": "编辑"
+    },
+    "list": {
+      "title": "日记列表",
+      "all": "全部",
+      "recent": "最近",
+      "search": "搜索日记",
+      "noResults": "暂无日记"
+    },
+    "analysis": {
+      "title": "AI分析",
+      "insight": "洞察",
+      "pattern": "投资模式",
+      "emotion": "情绪分析",
+      "suggestion": "改进建议",
+      "strength": "优势",
+      "weakness": "劣势",
+      "trend": "趋势"
+    },
+    "stats": {
+      "title": "统计",
+      "totalEntries": "总日记数",
+      "winRate": "胜率",
+      "avgProfit": "平均收益率",
+      "bestTrade": "最佳交易",
+      "worstTrade": "最差交易",
+      "streak": "连续记录"
+    },
+    "emotion": {
+      "confident": "自信",
+      "anxious": "焦虑",
+      "excited": "兴奋",
+      "fearful": "恐惧",
+      "neutral": "平静",
+      "greedy": "贪婪",
+      "patient": "耐心",
+      "regretful": "后悔"
+    }
+  }
+}

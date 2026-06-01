@@ -1,0 +1,80 @@
+{
+  "trading": {
+    "title": "Paper Trading",
+    "description": "Practice investing with virtual money",
+    "realtime": "Realtime",
+    "paused": "Paused",
+    "stockTab": "Stock",
+    "coinTab": "Crypto",
+    "buy": "Buy",
+    "sell": "Sell",
+    "balance": {
+      "title": "Account Balance",
+      "cash": "Cash",
+      "invested": "Invested",
+      "total": "Total Assets",
+      "profit": "Profit",
+      "loss": "Loss",
+      "profitRate": "Return Rate"
+    },
+    "order": {
+      "title": "Order",
+      "buy": "Buy",
+      "sell": "Sell",
+      "market": "Market",
+      "limit": "Limit",
+      "stop": "Stop Loss",
+      "quantity": "Quantity",
+      "price": "Price",
+      "total": "Total",
+      "fee": "Fee",
+      "confirm": "Confirm Order",
+      "execute": "Execute",
+      "cancel": "Cancel Order",
+      "history": "Order History",
+      "pending": "Pending",
+      "completed": "Completed",
+      "cancelled": "Cancelled"
+    },
+    "position": {
+      "title": "Holdings",
+      "name": "Name",
+      "code": "Code",
+      "avgPrice": "Avg Price",
+      "currentPrice": "Current Price",
+      "quantity": "Quantity",
+      "value": "Value",
+      "profit": "P/L",
+      "profitRate": "Return %"
+    },
+    "stockInfo": {
+      "title": "Stock Info",
+      "chart": "Chart",
+      "news": "News",
+      "info": "Info",
+      "financials": "Financials",
+      "volume": "Volume",
+      "marketCap": "Market Cap",
+      "per": "PER",
+      "pbr": "PBR",
+      "dividend": "Dividend",
+      "high52w": "52W High",
+      "low52w": "52W Low"
+    },
+    "terms": {
+      "bull": "Bull Market",
+      "bear": "Bear Market",
+      "long": "Long",
+      "short": "Short",
+      "leverage": "Leverage",
+      "margin": "Margin",
+      "volatility": "Volatility",
+      "liquidity": "Liquidity",
+      "diversification": "Diversification",
+      "rebalancing": "Rebalancing",
+      "dca": "DCA",
+      "stopLoss": "Stop Loss",
+      "takeProfit": "Take Profit"
+    }
+  }
+}

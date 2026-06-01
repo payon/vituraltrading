@@ -1,0 +1,55 @@
+{
+  "analysis": {
+    "title": "Portfolio Analysis",
+    "description": "Comprehensive analysis of your investment portfolio",
+    "overview": {
+      "title": "Overview",
+      "totalAssets": "Total Assets",
+      "totalProfit": "Total Profit",
+      "totalReturn": "Total Return",
+      "dailyChange": "Daily Change",
+      "assetAllocation": "Asset Allocation"
+    },
+    "performance": {
+      "title": "Performance Analysis",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "cumulative": "Cumulative",
+      "benchmark": "Benchmark Comparison"
+    },
+    "risk": {
+      "title": "Risk Analysis",
+      "volatility": "Volatility",
+      "sharpeRatio": "Sharpe Ratio",
+      "maxDrawdown": "Max Drawdown",
+      "var": "VaR (Value at Risk)",
+      "beta": "Beta",
+      "correlation": "Correlation"
+    },
+    "diversification": {
+      "title": "Diversification Analysis",
+      "bySector": "By Sector",
+      "byAsset": "By Asset",
+      "byRegion": "By Region",
+      "concentration": "Concentration",
+      "recommendation": "Recommendation"
+    },
+    "comparison": {
+      "title": "Comparison Analysis",
+      "kospi": "KOSPI",
+      "kosdaq": "KOSDAQ",
+      "sp500": "S&P 500",
+      "bitcoin": "Bitcoin",
+      "gold": "Gold"
+    },
+    "report": {
+      "title": "Analysis Report",
+      "generate": "Generate Report",
+      "download": "Download PDF",
+      "period": "Analysis Period",
+      "summary": "Summary"
+    }
+  }
+}

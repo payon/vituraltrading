@@ -1,0 +1,74 @@
+{
+  "trading": {
+    "title": "模拟交易",
+    "description": "使用虚拟资金体验真实交易",
+    "balance": {
+      "title": "账户余额",
+      "cash": "现金",
+      "invested": "已投资",
+      "total": "总资产",
+      "profit": "收益",
+      "loss": "亏损",
+      "profitRate": "收益率"
+    },
+    "order": {
+      "title": "订单",
+      "buy": "买入",
+      "sell": "卖出",
+      "market": "市价",
+      "limit": "限价",
+      "stop": "止损",
+      "quantity": "数量",
+      "price": "价格",
+      "total": "总额",
+      "fee": "手续费",
+      "confirm": "确认订单",
+      "execute": "执行订单",
+      "cancel": "取消订单",
+      "history": "订单历史",
+      "pending": "待成交",
+      "completed": "已成交",
+      "cancelled": "已取消"
+    },
+    "position": {
+      "title": "持仓",
+      "name": "名称",
+      "code": "代码",
+      "avgPrice": "均价",
+      "currentPrice": "现价",
+      "quantity": "数量",
+      "value": "市值",
+      "profit": "盈亏",
+      "profitRate": "收益率"
+    },
+    "stock": {
+      "title": "股票信息",
+      "chart": "图表",
+      "news": "新闻",
+      "info": "概况",
+      "financials": "财务",
+      "volume": "成交量",
+      "marketCap": "市值",
+      "per": "市盈率",
+      "pbr": "市净率",
+      "dividend": "股息率",
+      "high52w": "52周最高",
+      "low52w": "52周最低"
+    },
+    "terms": {
+      "bull": "牛市",
+      "bear": "熊市",
+      "long": "做多",
+      "short": "做空",
+      "leverage": "杠杆",
+      "margin": "保证金",
+      "volatility": "波动率",
+      "liquidity": "流动性",
+      "diversification": "分散投资",
+      "rebalancing": "再平衡",
+      "dca": "定投",
+      "stopLoss": "止损",
+      "takeProfit": "止盈"
+    }
+  }
+}

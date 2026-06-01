@@ -1,0 +1,55 @@
+{
+  "analysis": {
+    "title": "포트폴리오 분석",
+    "description": "나의 투자 포트폴리오를 종합적으로 분석합니다",
+    "overview": {
+      "title": "개요",
+      "totalAssets": "총 자산",
+      "totalProfit": "총 수익",
+      "totalReturn": "총 수익률",
+      "dailyChange": "일일 변동",
+      "assetAllocation": "자산 배분"
+    },
+    "performance": {
+      "title": "수익률 분석",
+      "daily": "일별",
+      "weekly": "주별",
+      "monthly": "월별",
+      "yearly": "연별",
+      "cumulative": "누적",
+      "benchmark": "벤치마크 비교"
+    },
+    "risk": {
+      "title": "리스크 분석",
+      "volatility": "변동성",
+      "sharpeRatio": "샤프 지수",
+      "maxDrawdown": "최대 낙폭",
+      "var": "VaR (Value at Risk)",
+      "beta": "베타",
+      "correlation": "상관관계"
+    },
+    "diversification": {
+      "title": "분산투자 분석",
+      "bySector": "섹터별",
+      "byAsset": "자산별",
+      "byRegion": "지역별",
+      "concentration": "집중도",
+      "recommendation": "분산 추천"
+    },
+    "comparison": {
+      "title": "비교 분석",
+      "kospi": "KOSPI",
+      "kosdaq": "KOSDAQ",
+      "sp500": "S&P 500",
+      "bitcoin": "비트코인",
+      "gold": "금"
+    },
+    "report": {
+      "title": "분석 리포트",
+      "generate": "리포트 생성",
+      "download": "PDF 다운로드",
+      "period": "분석 기간",
+      "summary": "요약"
+    }
+  }
+}

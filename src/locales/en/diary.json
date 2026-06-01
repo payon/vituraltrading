@@ -1,0 +1,123 @@
+{
+  "diary": {
+    "title": "Investment Diary",
+    "description": "Record your investment experience and grow with AI analysis",
+    "aiAnalysis": "AI Diary Analysis",
+    "aiAnalysisDesc": "Watch an ad to use for free",
+    "newDiary": "New Diary",
+    "write": {
+      "title": "Write Diary",
+      "date": "Date",
+      "market": "Market Condition",
+      "trade": "Trade Summary",
+      "tradeReason": "Trade Reason",
+      "emotion": "Emotion State",
+      "lesson": "Lessons Learned",
+      "plan": "Future Plan",
+      "tags": "Tags",
+      "save": "Save",
+      "edit": "Edit",
+      "content": "Today's Investment Diary",
+      "contentPlaceholder": "Write freely about your feelings, lessons, and plans for tomorrow...",
+      "selfRating": "Self Rating",
+      "selfRatingLabel": "Self Rating"
+    },
+    "list": {
+      "title": "Diary List",
+      "all": "All",
+      "recent": "Recent",
+      "search": "Search Diary",
+      "noResults": "No diaries written",
+      "noResultsDesc": "Write your first investment diary!",
+      "loadMore": "Load More",
+      "aiAnalysisComplete": "AI Analysis Complete"
+    },
+    "analysis": {
+      "title": "AI Analysis",
+      "insight": "Insight",
+      "pattern": "Trading Pattern Analysis",
+      "emotion": "Emotion Analysis",
+      "emotionImpact": "Emotion Impact on Trading",
+      "emotionInsight": "Emotion Insight",
+      "suggestion": "Improvement Suggestions",
+      "strength": "Strengths",
+      "weakness": "Areas for Improvement",
+      "trend": "Trend",
+      "overallComment": "Overall Comment",
+      "analyzing": "AI is analyzing your diary...",
+      "analyzingDesc": "Please wait a moment",
+      "noAnalysis": "Write a diary and request AI analysis",
+      "cached": "Cached Analysis",
+      "investmentStyle": "Investment Style"
+    },
+    "stats": {
+      "title": "Statistics",
+      "totalEntries": "Total Entries",
+      "monthlyEntries": "This Month",
+      "winRate": "Win Rate",
+      "avgProfit": "Avg Return",
+      "bestTrade": "Best Trade",
+      "worstTrade": "Worst Trade",
+      "streak": "Streak",
+      "currentStreak": "Current Streak",
+      "longestStreak": "Longest Streak",
+      "avgSelfRating": "Avg Self Rating",
+      "last7Days": "Last 7 Days",
+      "emotionDistribution": "Emotion Distribution",
+      "styleDistribution": "Style Distribution"
+    },
+    "emotion": {
+      "title": "Today's Emotion State",
+      "description": "Select emotions felt during trading and adjust intensity",
+      "addEmotion": "Add Emotion",
+      "intensity": "Intensity",
+      "noEmotion": "No emotion selected",
+      "noEmotionDesc": "Click the button below to add an emotion",
+      "GREED": {
+        "label": "Greed",
+        "description": "Excessive desire for profit"
+      },
+      "FEAR": {
+        "label": "Fear",
+        "description": "Fear of loss"
+      },
+      "HOPE": {
+        "label": "Hope",
+        "description": "Positive expectation"
+      },
+      "ANXIETY": {
+        "label": "Anxiety",
+        "description": "Worry about uncertainty"
+      },
+      "CONFIDENCE": {
+        "label": "Confidence",
+        "description": "Certainty about investment"
+      }
+    },
+    "pattern": {
+      "title": "Trading Pattern Analysis",
+      "dominantEmotion": "Most Felt Emotion",
+      "times": "times",
+      "avgIntensity": "Avg Intensity"
+    },
+    "style": {
+      "CONSERVATIVE": "Conservative",
+      "MODERATE": "Moderate",
+      "AGGRESSIVE": "Aggressive"
+    },
+    "message": {
+      "saveSuccess": "Diary saved successfully.",
+      "saveError": "Failed to save diary.",
+      "deleteConfirm": "Are you sure you want to delete this diary?",
+      "deleteSuccess": "Diary deleted successfully.",
+      "deleteError": "Failed to delete diary.",
+      "analyzeError": "AI analysis failed."
+    },
+    "summary": {
+      "title": "Summary",
+      "characters": "characters written",
+      "emotionsSelected": "emotions selected",
+      "selfRating": "points"
+    }
+  }
+}

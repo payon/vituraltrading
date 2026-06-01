@@ -1,0 +1,123 @@
+{
+  "diary": {
+    "title": "투자 일기",
+    "description": "투자 경험을 기록하고 AI 분석으로 성장하세요",
+    "aiAnalysis": "AI 투자 일기 분석",
+    "aiAnalysisDesc": "광고를 시청하면 무료로 사용할 수 있습니다",
+    "newDiary": "새 일기 작성",
+    "write": {
+      "title": "일기 작성",
+      "date": "날짜",
+      "market": "시장 상황",
+      "trade": "매매 내역",
+      "tradeReason": "매매 이유",
+      "emotion": "감정 상태",
+      "lesson": "배운 점",
+      "plan": "향후 계획",
+      "tags": "태그",
+      "save": "저장하기",
+      "edit": "수정하기",
+      "content": "오늘의 투자 일기",
+      "contentPlaceholder": "오늘 투자하며 느낀 점, 배운 점, 내일의 계획 등을 자유롭게 작성하세요...",
+      "selfRating": "오늘의 투자 자가 평가",
+      "selfRatingLabel": "자가평가"
+    },
+    "list": {
+      "title": "일기 목록",
+      "all": "전체",
+      "recent": "최근",
+      "search": "일기 검색",
+      "noResults": "작성된 일기가 없습니다",
+      "noResultsDesc": "첫 번째 투자 일기를 작성해보세요!",
+      "loadMore": "더 불러오기",
+      "aiAnalysisComplete": "AI 분석 완료"
+    },
+    "analysis": {
+      "title": "AI 분석",
+      "insight": "인사이트",
+      "pattern": "매매 패턴 분석",
+      "emotion": "감정 분석",
+      "emotionImpact": "감정이 투자에 미친 영향",
+      "emotionInsight": "감정 인사이트",
+      "suggestion": "개선 제안",
+      "strength": "칭찬할 점",
+      "weakness": "주의할 점",
+      "trend": "트렌드",
+      "overallComment": "종합 코멘트",
+      "analyzing": "AI가 일기를 분석하고 있습니다...",
+      "analyzingDesc": "잠시만 기다려주세요",
+      "noAnalysis": "일기를 작성하고 AI 분석을 요청해주세요",
+      "cached": "저장된 분석",
+      "investmentStyle": "투자 성향"
+    },
+    "stats": {
+      "title": "통계",
+      "totalEntries": "총 일기 수",
+      "monthlyEntries": "이번 달 작성",
+      "winRate": "승률",
+      "avgProfit": "평균 수익률",
+      "bestTrade": "최고 수익 거래",
+      "worstTrade": "최대 손실 거래",
+      "streak": "연속 기록",
+      "currentStreak": "연속 작성",
+      "longestStreak": "최장 연속",
+      "avgSelfRating": "평균 자가평가",
+      "last7Days": "최근 7일 작성 현황",
+      "emotionDistribution": "감정 분포",
+      "styleDistribution": "투자 성향 분포"
+    },
+    "emotion": {
+      "title": "오늘의 감정 상태",
+      "description": "투자 중 느꼈던 감정을 선택하고 강도를 조절해주세요",
+      "addEmotion": "감정 추가",
+      "intensity": "강도",
+      "noEmotion": "아직 선택된 감정이 없습니다",
+      "noEmotionDesc": "아래 버튼을 눌러 감정을 추가해주세요",
+      "GREED": {
+        "label": "욕심",
+        "description": "과도한 수익 욕심"
+      },
+      "FEAR": {
+        "label": "공포",
+        "description": "손실에 대한 두려움"
+      },
+      "HOPE": {
+        "label": "희망",
+        "description": "긍정적인 기대감"
+      },
+      "ANXIETY": {
+        "label": "불안",
+        "description": "불확실성에 대한 걱정"
+      },
+      "CONFIDENCE": {
+        "label": "자신감",
+        "description": "투자에 대한 확신"
+      }
+    },
+    "pattern": {
+      "title": "투자 패턴 분석",
+      "dominantEmotion": "가장 많이 느낀 감정",
+      "times": "회",
+      "avgIntensity": "평균 강도"
+    },
+    "style": {
+      "CONSERVATIVE": "보수적",
+      "MODERATE": "중립적",
+      "AGGRESSIVE": "공격적"
+    },
+    "message": {
+      "saveSuccess": "일기가 저장되었습니다.",
+      "saveError": "일기 저장에 실패했습니다.",
+      "deleteConfirm": "정말 이 일기를 삭제하시겠습니까?",
+      "deleteSuccess": "일기가 삭제되었습니다.",
+      "deleteError": "일기 삭제에 실패했습니다.",
+      "analyzeError": "AI 분석에 실패했습니다."
+    },
+    "summary": {
+      "title": "작성 내용 요약",
+      "characters": "자 작성",
+      "emotionsSelected": "개 감정 선택",
+      "selfRating": "점"
+    }
+  }
+}

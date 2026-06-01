@@ -1,0 +1,52 @@
+{
+  "learning": {
+    "title": "学习中心",
+    "description": "从投资基础到高级策略",
+    "categories": {
+      "all": "全部",
+      "basics": "投资基础",
+      "stocks": "股票",
+      "crypto": "加密货币",
+      "technical": "技术分析",
+      "fundamental": "基本面分析",
+      "strategy": "投资策略"
+    },
+    "progress": {
+      "title": "学习进度",
+      "completed": "已完成",
+      "inProgress": "进行中",
+      "notStarted": "未开始",
+      "continue": "继续学习"
+    },
+    "lesson": {
+      "start": "开始学习",
+      "continue": "继续",
+      "complete": "完成",
+      "quiz": "参加测验",
+      "review": "复习",
+      "duration": "时长",
+      "difficulty": "难度",
+      "beginner": "初级",
+      "intermediate": "中级",
+      "advanced": "高级"
+    },
+    "quiz": {
+      "title": "测验",
+      "question": "问题",
+      "correct": "正确",
+      "incorrect": "错误",
+      "score": "得分",
+      "pass": "通过",
+      "fail": "未通过",
+      "retry": "重试",
+      "submit": "提交",
+      "nextQuestion": "下一题",
+      "result": "结果"
+    },
+    "certificate": {
+      "title": "证书",
+      "issued": "颁发日期",
+      "download": "下载"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "analysis": {
+    "title": "投资组合分析",
+    "description": "全面分析您的投资组合",
+    "overview": {
+      "title": "概览",
+      "totalAssets": "总资产",
+      "totalProfit": "总收益",
+      "totalReturn": "总收益率",
+      "dailyChange": "日变动",
+      "assetAllocation": "资产配置"
+    },
+    "performance": {
+      "title": "业绩分析",
+      "daily": "日",
+      "weekly": "周",
+      "monthly": "月",
+      "yearly": "年",
+      "cumulative": "累计",
+      "benchmark": "基准比较"
+    },
+    "risk": {
+      "title": "风险分析",
+      "volatility": "波动率",
+      "sharpeRatio": "夏普比率",
+      "maxDrawdown": "最大回撤",
+      "var": "风险价值(VaR)",
+      "beta": "贝塔",
+      "correlation": "相关性"
+    },
+    "diversification": {
+      "title": "分散投资分析",
+      "bySector": "按行业",
+      "byAsset": "按资产",
+      "byRegion": "按地区",
+      "concentration": "集中度",
+      "recommendation": "建议"
+    },
+    "comparison": {
+      "title": "比较分析",
+      "kospi": "KOSPI",
+      "kosdaq": "KOSDAQ",
+      "sp500": "标普500",
+      "bitcoin": "比特币",
+      "gold": "黄金"
+    },
+    "report": {
+      "title": "分析报告",
+      "generate": "生成报告",
+      "download": "下载PDF",
+      "period": "分析期间",
+      "summary": "摘要"
+    }
+  }
+}
