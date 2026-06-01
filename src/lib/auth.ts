@@ -1,12 +1,11 @@
 /**
  * NextAuth 설정
  * - 이메일/비밀번호 인증
- * - Prisma Adapter 사용
+ * - JWT 세션 사용 (Prisma Adapter 없이)
  */
 
 import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import bcrypt from 'bcryptjs';
 import { db } from '@/lib/db';
 
@@ -50,7 +49,7 @@ declare module 'next-auth/jwt' {
 }
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(db),
+  // JWT 세션 사용 - Prisma Adapter 불필요
   session: {
     strategy: 'jwt',
     maxAge: 30 * 24 * 60 * 60, // 30 days
