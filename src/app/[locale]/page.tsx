@@ -76,6 +76,12 @@ import { AdminSettings } from '@/components/admin/AdminSettings';
 import { UserMenu } from '@/components/auth/UserMenu';
 import { AuthProvider } from '@/components/auth/AuthProvider';
 
+// 새로운 기능 컴포넌트
+import { OrderBook } from '@/components/trading/order-book';
+import { Watchlist } from '@/components/trading/watchlist';
+import { AccountSettings } from '@/components/trading/account-settings';
+import { Leaderboard } from '@/components/trading/leaderboard';
+
 // 학습 관련 타입
 interface CategoryProgress {
   categorySlug: string;
@@ -502,12 +508,18 @@ function MainContent() {
           </div>
 
           <div className="grid grid-cols-12 gap-4">
-            {/* 왼쪽 사이드바 - 종목 리스트 */}
-            <div className="col-span-12 lg:col-span-3">
+            {/* 왼쪽 사이드바 - 종목 리스트 & 관심종목 */}
+            <div className="col-span-12 lg:col-span-3 space-y-4">
               <StockList 
                 assetType={assetType} 
                 onSelectStock={handleSelectStock}
                 selectedSymbol={selectedStock?.symbol}
+              />
+              <Watchlist
+                assetType={assetType}
+                onSelectStock={handleSelectStock}
+                selectedSymbol={selectedStock?.symbol}
+                stocks={[]}
               />
             </div>
 
@@ -552,8 +564,9 @@ function MainContent() {
               <AdBannerCompact className="mt-4" />
             </div>
 
-            {/* 오른쪽 사이드바 - 매매 패널 */}
-            <div className="col-span-12 lg:col-span-3">
+            {/* 오른쪽 사이드바 - 호가창 & 매매 패널 */}
+            <div className="col-span-12 lg:col-span-3 space-y-4">
+              <OrderBook stock={selectedStock} />
               <TradingPanel 
                 stock={selectedStock} 
                 onOrderComplete={handleOrderComplete}
@@ -611,6 +624,12 @@ function MainContent() {
                   portfolioData={analysisData.returnData}
                 />
               )}
+
+              {/* 랭킹 & 계좌 관리 */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <Leaderboard />
+                <AccountSettings onRefresh={fetchAnalysisData} />
+              </div>
 
               {/* 분석 탭 하단 광고 배너 */}
               <AdBannerCompact className="mt-6" />

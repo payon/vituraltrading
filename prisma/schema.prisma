@@ -44,6 +44,7 @@ model User {
   diaries           InvestmentDiary[]
   accounts          Account[]
   sessions          Session[]
+  watchlist         Watchlist[]
 }
 
 /// NextAuth Account (OAuth 등)
@@ -435,4 +436,31 @@ model PriceHistory {
   @@unique([symbol, assetType, timestamp, interval])
   @@index([symbol, assetType])
   @@index([timestamp])
+}
+
+// ============================================
+// 관심종목 모델
+// ============================================
+
+/// 관심종목 (즐겨찾기)
+model Watchlist {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 종목 정보
+  assetType   AssetType
+  symbol      String
+  name        String
+  
+  // 알림 설정
+  priceAlertEnabled Boolean @default(false)
+  targetPrice       Float?  // 목표가
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@unique([userId, symbol, assetType])
+  @@index([userId])
+  @@index([symbol])
 }
