@@ -78,11 +78,13 @@ function generateOrderBookData(currentPrice: number): OrderBookData {
   };
 }
 
-function formatPrice(price: number): string {
+function formatPrice(price: number | undefined): string {
+  if (price === undefined || price === null || isNaN(price)) return '-';
   return price.toLocaleString('ko-KR');
 }
 
-function formatQuantity(qty: number): string {
+function formatQuantity(qty: number | undefined): string {
+  if (qty === undefined || qty === null || isNaN(qty)) return '-';
   if (qty >= 1000000) {
     return (qty / 1000000).toFixed(1) + 'M';
   }
