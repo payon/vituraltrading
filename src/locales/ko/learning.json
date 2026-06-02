@@ -1,0 +1,73 @@
+{
+  "learning": {
+    "title": "학습 센터",
+    "description": "투자 기초부터 고급 전략까지",
+    "backToCategory": "카테고리로 돌아가기",
+    "category": {
+      "title": "학습 카테고리",
+      "total": "총 {count}개 카테고리",
+      "all": "전체",
+      "basics": "투자 기초",
+      "stocks": "주식",
+      "crypto": "코인",
+      "technical": "기술적 분석",
+      "fundamental": "기본적 분석",
+      "strategy": "투자 전략",
+      "stockBasics": "주식 기초",
+      "chartAnalysis": "차트 분석",
+      "investmentStrategy": "투자 전략",
+      "riskManagement": "위험 관리"
+    },
+    "progress": {
+      "title": "학습 진도",
+      "completed": "완료",
+      "inProgress": "진행중",
+      "notStarted": "미시작",
+      "continue": "이어서 학습하기",
+      "completedTopics": "완료한 강의",
+      "remaining": "남은 강의",
+      "streak": "연속 학습",
+      "days": "일",
+      "quizScore": "퀴즈 평균 점수"
+    },
+    "lesson": {
+      "start": "학습 시작",
+      "continue": "계속하기",
+      "complete": "완료하기",
+      "completed": "완료됨",
+      "quiz": "퀴즈 풀기",
+      "review": "복습하기",
+      "duration": "소요 시간",
+      "difficulty": "난이도",
+      "beginner": "초급",
+      "intermediate": "중급",
+      "advanced": "고급",
+      "nextLesson": "다음 강의",
+      "prevLesson": "이전 강의",
+      "progress": "진행률"
+    },
+    "quiz": {
+      "title": "퀴즈",
+      "question": "문제",
+      "correct": "정답",
+      "incorrect": "오답",
+      "score": "점수",
+      "pass": "합격",
+      "fail": "불합격",
+      "retry": "다시 풀기",
+      "submit": "제출하기",
+      "start": "퀴즈 시작",
+      "nextQuestion": "다음 문제",
+      "result": "결과",
+      "explanation": "해설",
+      "tryAgain": "다시 시도",
+      "passed": "합격했습니다!",
+      "failed": "불합격했습니다"
+    },
+    "certificate": {
+      "title": "수료증",
+      "issued": "발급일",
+      "download": "다운로드"
+    }
+  }
+}

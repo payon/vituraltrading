@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "Home",
+    "learning": "Learning",
+    "trading": "Trading",
+    "portfolio": "Analysis",
+    "diary": "Diary",
+    "settings": "Settings"
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "search": "Search",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "paste": "Paste",
+    "selectAll": "Select All",
+    "deselectAll": "Deselect All",
+    "noData": "No data available",
+    "noResults": "No results found",
+    "required": "Required",
+    "optional": "Optional",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "on": "On",
+    "off": "Off",
+    "analyze": "Analyze"
+  },
+  "language": {
+    "title": "Language Settings",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "select": "Select Language"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "thisYear": "This Year"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email format",
+    "invalidNumber": "Only numbers are allowed",
+    "minLength": "Minimum {min} characters required",
+    "maxLength": "Maximum {max} characters allowed",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "networkError": "Please check your network connection",
+    "notFound": "Page not found",
+    "unauthorized": "Login required",
+    "forbidden": "Access denied",
+    "serverError": "Server error occurred"
+  },
+  "app": {
+    "title": "Invest Learning",
+    "description": "Stock & Crypto Investment Learning & Paper Trading Platform",
+    "slogan": "Learn, Practice, Grow",
+    "disclaimer": "This app is for educational purposes only and does not constitute investment advice. Paper trading is not related to actual profits or losses.",
+    "copyright": "© 2024 Invest Learning. All rights reserved."
+  }
+}

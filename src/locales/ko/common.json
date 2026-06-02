@@ -1,0 +1,84 @@
+{
+  "navigation": {
+    "home": "홈",
+    "learning": "학습",
+    "trading": "모의투자",
+    "portfolio": "분석",
+    "diary": "일기",
+    "settings": "설정"
+  },
+  "common": {
+    "confirm": "확인",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "loading": "로딩중...",
+    "error": "오류",
+    "success": "성공",
+    "search": "검색",
+    "edit": "수정",
+    "close": "닫기",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "submit": "제출",
+    "reset": "초기화",
+    "filter": "필터",
+    "sort": "정렬",
+    "refresh": "새로고침",
+    "download": "다운로드",
+    "upload": "업로드",
+    "copy": "복사",
+    "paste": "붙여넣기",
+    "selectAll": "전체선택",
+    "deselectAll": "전체해제",
+    "noData": "데이터가 없습니다",
+    "noResults": "검색 결과가 없습니다",
+    "required": "필수",
+    "optional": "선택",
+    "enabled": "활성화",
+    "disabled": "비활성화",
+    "on": "켜기",
+    "off": "끄기",
+    "analyze": "분석하기"
+  },
+  "language": {
+    "title": "언어 설정",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "中文",
+    "select": "언어 선택"
+  },
+  "time": {
+    "today": "오늘",
+    "yesterday": "어제",
+    "thisWeek": "이번 주",
+    "thisMonth": "이번 달",
+    "lastMonth": "지난달",
+    "thisYear": "올해"
+  },
+  "validation": {
+    "required": "필수 입력 항목입니다",
+    "invalidEmail": "올바른 이메일 형식이 아닙니다",
+    "invalidNumber": "숫자만 입력 가능합니다",
+    "minLength": "최소 {min}자 이상 입력해주세요",
+    "maxLength": "최대 {max}자까지 입력 가능합니다",
+    "passwordMismatch": "비밀번호가 일치하지 않습니다"
+  },
+  "errors": {
+    "generic": "오류가 발생했습니다",
+    "networkError": "네트워크 연결을 확인해주세요",
+    "notFound": "페이지를 찾을 수 없습니다",
+    "unauthorized": "로그인이 필요합니다",
+    "forbidden": "접근 권한이 없습니다",
+    "serverError": "서버 오류가 발생했습니다"
+  },
+  "app": {
+    "title": "투자학습 모의투자",
+    "description": "주식·코인 투자 학습 & 모의투자 플랫폼",
+    "slogan": "배우고, 연습하고, 성장하세요",
+    "disclaimer": "본 앱은 교육 목적이며, 실제 투자 권유가 아닙니다. 모의투자는 실제 손익과 무관합니다.",
+    "copyright": "© 2024 투자학습 모의투자. All rights reserved."
+  }
+}

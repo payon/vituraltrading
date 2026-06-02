@@ -1,0 +1,55 @@
+{
+  "analysis": {
+    "title": "ポートフォリオ分析",
+    "description": "投資ポートフォリオを総合的に分析します",
+    "overview": {
+      "title": "概要",
+      "totalAssets": "総資産",
+      "totalProfit": "総利益",
+      "totalReturn": "総利益率",
+      "dailyChange": "日次変動",
+      "assetAllocation": "資産配分"
+    },
+    "performance": {
+      "title": "パフォーマンス分析",
+      "daily": "日次",
+      "weekly": "週次",
+      "monthly": "月次",
+      "yearly": "年次",
+      "cumulative": "累積",
+      "benchmark": "ベンチマーク比較"
+    },
+    "risk": {
+      "title": "リスク分析",
+      "volatility": "ボラティリティ",
+      "sharpeRatio": "シャープレシオ",
+      "maxDrawdown": "最大ドローダウン",
+      "var": "VaR（バリューアットリスク）",
+      "beta": "ベータ",
+      "correlation": "相関"
+    },
+    "diversification": {
+      "title": "分散投資分析",
+      "bySector": "セクター別",
+      "byAsset": "資産別",
+      "byRegion": "地域別",
+      "concentration": "集中度",
+      "recommendation": "推奨"
+    },
+    "comparison": {
+      "title": "比較分析",
+      "kospi": "KOSPI",
+      "kosdaq": "KOSDAQ",
+      "sp500": "S&P 500",
+      "bitcoin": "ビットコイン",
+      "gold": "金"
+    },
+    "report": {
+      "title": "分析レポート",
+      "generate": "レポート生成",
+      "download": "PDFダウンロード",
+      "period": "分析期間",
+      "summary": "要約"
+    }
+  }
+}

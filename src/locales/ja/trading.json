@@ -1,0 +1,74 @@
+{
+  "trading": {
+    "title": "デモ取引",
+    "description": "仮想資金でリアルな取引体験を",
+    "balance": {
+      "title": "口座残高",
+      "cash": "現金",
+      "invested": "投資額",
+      "total": "総資産",
+      "profit": "利益",
+      "loss": "損失",
+      "profitRate": "利益率"
+    },
+    "order": {
+      "title": "注文",
+      "buy": "買い",
+      "sell": "売り",
+      "market": "成行",
+      "limit": "指値",
+      "stop": "逆指値",
+      "quantity": "数量",
+      "price": "価格",
+      "total": "合計",
+      "fee": "手数料",
+      "confirm": "注文確認",
+      "execute": "注文実行",
+      "cancel": "注文取消",
+      "history": "注文履歴",
+      "pending": "未約定",
+      "completed": "約定済み",
+      "cancelled": "取消済み"
+    },
+    "position": {
+      "title": "保有銘柄",
+      "name": "銘柄名",
+      "code": "銘柄コード",
+      "avgPrice": "平均単価",
+      "currentPrice": "現在値",
+      "quantity": "保有数量",
+      "value": "評価額",
+      "profit": "評価損益",
+      "profitRate": "利益率"
+    },
+    "stock": {
+      "title": "銘柄情報",
+      "chart": "チャート",
+      "news": "ニュース",
+      "info": "基本情報",
+      "financials": "財務情報",
+      "volume": "出来高",
+      "marketCap": "時価総額",
+      "per": "PER",
+      "pbr": "PBR",
+      "dividend": "配当利回り",
+      "high52w": "52週高値",
+      "low52w": "52週安値"
+    },
+    "terms": {
+      "bull": "強気市場",
+      "bear": "弱気市場",
+      "long": "ロング",
+      "short": "ショート",
+      "leverage": "レバレッジ",
+      "margin": "マージン",
+      "volatility": "ボラティリティ",
+      "liquidity": "流動性",
+      "diversification": "分散投資",
+      "rebalancing": "リバランス",
+      "dca": "積立投資",
+      "stopLoss": "損切り",
+      "takeProfit": "利確"
+    }
+  }
+}

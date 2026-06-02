@@ -1,0 +1,73 @@
+{
+  "learning": {
+    "title": "Learning Center",
+    "description": "From basics to advanced strategies",
+    "backToCategory": "Back to Categories",
+    "category": {
+      "title": "Learning Categories",
+      "total": "{count} categories",
+      "all": "All",
+      "basics": "Investment Basics",
+      "stocks": "Stocks",
+      "crypto": "Crypto",
+      "technical": "Technical Analysis",
+      "fundamental": "Fundamental Analysis",
+      "strategy": "Investment Strategy",
+      "stockBasics": "Stock Basics",
+      "chartAnalysis": "Chart Analysis",
+      "investmentStrategy": "Investment Strategy",
+      "riskManagement": "Risk Management"
+    },
+    "progress": {
+      "title": "Learning Progress",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started",
+      "continue": "Continue Learning",
+      "completedTopics": "Completed Topics",
+      "remaining": "Remaining",
+      "streak": "Learning Streak",
+      "days": "days",
+      "quizScore": "Quiz Avg Score"
+    },
+    "lesson": {
+      "start": "Start Learning",
+      "continue": "Continue",
+      "complete": "Complete",
+      "completed": "Completed",
+      "quiz": "Take Quiz",
+      "review": "Review",
+      "duration": "Duration",
+      "difficulty": "Difficulty",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "nextLesson": "Next Lesson",
+      "prevLesson": "Previous Lesson",
+      "progress": "Progress"
+    },
+    "quiz": {
+      "title": "Quiz",
+      "question": "Question",
+      "correct": "Correct",
+      "incorrect": "Incorrect",
+      "score": "Score",
+      "pass": "Pass",
+      "fail": "Fail",
+      "retry": "Retry",
+      "submit": "Submit",
+      "start": "Start Quiz",
+      "nextQuestion": "Next Question",
+      "result": "Result",
+      "explanation": "Explanation",
+      "tryAgain": "Try Again",
+      "passed": "Passed!",
+      "failed": "Failed"
+    },
+    "certificate": {
+      "title": "Certificate",
+      "issued": "Issued",
+      "download": "Download"
+    }
+  }
+}

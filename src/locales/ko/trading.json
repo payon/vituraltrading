@@ -1,0 +1,80 @@
+{
+  "trading": {
+    "title": "모의투자",
+    "description": "가상 자금으로 실전 같은 투자 경험",
+    "realtime": "실시간",
+    "paused": "일시중지",
+    "stockTab": "주식",
+    "coinTab": "코인",
+    "buy": "매수",
+    "sell": "매도",
+    "balance": {
+      "title": "계좌 잔고",
+      "cash": "현금",
+      "invested": "투자금",
+      "total": "총 자산",
+      "profit": "수익",
+      "loss": "손실",
+      "profitRate": "수익률"
+    },
+    "order": {
+      "title": "주문",
+      "buy": "매수",
+      "sell": "매도",
+      "market": "시장가",
+      "limit": "지정가",
+      "stop": "손절가",
+      "quantity": "수량",
+      "price": "가격",
+      "total": "총액",
+      "fee": "수수료",
+      "confirm": "주문 확인",
+      "execute": "주문 실행",
+      "cancel": "주문 취소",
+      "history": "주문 내역",
+      "pending": "미체결",
+      "completed": "체결완료",
+      "cancelled": "취소됨"
+    },
+    "position": {
+      "title": "보유 종목",
+      "name": "종목명",
+      "code": "종목코드",
+      "avgPrice": "평균단가",
+      "currentPrice": "현재가",
+      "quantity": "보유수량",
+      "value": "평가금액",
+      "profit": "평가손익",
+      "profitRate": "수익률"
+    },
+    "stockInfo": {
+      "title": "종목 정보",
+      "chart": "차트",
+      "news": "뉴스",
+      "info": "기본정보",
+      "financials": "재무정보",
+      "volume": "거래량",
+      "marketCap": "시가총액",
+      "per": "PER",
+      "pbr": "PBR",
+      "dividend": "배당수익률",
+      "high52w": "52주 최고",
+      "low52w": "52주 최저"
+    },
+    "terms": {
+      "bull": "상승장",
+      "bear": "하락장",
+      "long": "롱(매수)",
+      "short": "숏(매도)",
+      "leverage": "레버리지",
+      "margin": "마진",
+      "volatility": "변동성",
+      "liquidity": "유동성",
+      "diversification": "분산투자",
+      "rebalancing": "리밸런싱",
+      "dca": "적립식투자",
+      "stopLoss": "손절매",
+      "takeProfit": "익절매"
+    }
+  }
+}

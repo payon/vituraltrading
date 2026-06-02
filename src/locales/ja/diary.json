@@ -1,0 +1,54 @@
+{
+  "diary": {
+    "title": "投資日記",
+    "description": "投資経験を記録し、AI分析で成長しましょう",
+    "write": {
+      "title": "日記を書く",
+      "date": "日付",
+      "market": "市場状況",
+      "trade": "取引詳細",
+      "emotion": "感情状態",
+      "lesson": "学んだこと",
+      "plan": "今後の計画",
+      "tags": "タグ",
+      "save": "保存",
+      "edit": "編集"
+    },
+    "list": {
+      "title": "日記一覧",
+      "all": "すべて",
+      "recent": "最新",
+      "search": "日記を検索",
+      "noResults": "日記がありません"
+    },
+    "analysis": {
+      "title": "AI分析",
+      "insight": "インサイト",
+      "pattern": "投資パターン",
+      "emotion": "感情分析",
+      "suggestion": "改善提案",
+      "strength": "強み",
+      "weakness": "弱み",
+      "trend": "トレンド"
+    },
+    "stats": {
+      "title": "統計",
+      "totalEntries": "総日記数",
+      "winRate": "勝率",
+      "avgProfit": "平均利益率",
+      "bestTrade": "最高利益取引",
+      "worstTrade": "最大損失取引",
+      "streak": "連続記録"
+    },
+    "emotion": {
+      "confident": "自信",
+      "anxious": "不安",
+      "excited": "興奮",
+      "fearful": "恐怖",
+      "neutral": "普通",
+      "greedy": "強欲",
+      "patient": "忍耐",
+      "regretful": "後悔"
+    }
+  }
+}

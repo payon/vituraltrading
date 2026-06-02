@@ -1,0 +1,52 @@
+{
+  "learning": {
+    "title": "学習センター",
+    "description": "投資の基礎から高度な戦略まで",
+    "categories": {
+      "all": "すべて",
+      "basics": "投資の基礎",
+      "stocks": "株式",
+      "crypto": "暗号資産",
+      "technical": "テクニカル分析",
+      "fundamental": "ファンダメンタル分析",
+      "strategy": "投資戦略"
+    },
+    "progress": {
+      "title": "学習進捗",
+      "completed": "完了",
+      "inProgress": "進行中",
+      "notStarted": "未開始",
+      "continue": "続きから学習"
+    },
+    "lesson": {
+      "start": "学習を始める",
+      "continue": "続ける",
+      "complete": "完了する",
+      "quiz": "クイズに挑戦",
+      "review": "復習する",
+      "duration": "所要時間",
+      "difficulty": "難易度",
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
+    },
+    "quiz": {
+      "title": "クイズ",
+      "question": "問題",
+      "correct": "正解",
+      "incorrect": "不正解",
+      "score": "スコア",
+      "pass": "合格",
+      "fail": "不合格",
+      "retry": "再挑戦",
+      "submit": "送信",
+      "nextQuestion": "次の問題",
+      "result": "結果"
+    },
+    "certificate": {
+      "title": "修了証",
+      "issued": "発行日",
+      "download": "ダウンロード"
+    }
+  }
+}
