@@ -81,6 +81,12 @@ import { OrderBook } from '@/components/trading/order-book';
 import { Watchlist } from '@/components/trading/watchlist';
 import { AccountSettings } from '@/components/trading/account-settings';
 import { Leaderboard } from '@/components/trading/leaderboard';
+import { PendingOrders } from '@/components/trading/pending-orders';
+import { PriceAlerts } from '@/components/trading/price-alerts';
+
+// 테마 관련
+import { ThemeToggle } from '@/components/theme-toggle';
+import { ThemeProvider } from '@/components/layout/theme-provider';
 
 // 학습 관련 타입
 interface CategoryProgress {
@@ -451,6 +457,9 @@ function MainContent() {
               {/* 언어 전환 */}
               <LanguageSwitcher />
               
+              {/* 테마 토글 */}
+              <ThemeToggle />
+              
               {/* 사용자 메뉴 */}
               <UserMenu />
             </div>
@@ -564,9 +573,18 @@ function MainContent() {
               <AdBannerCompact className="mt-4" />
             </div>
 
-            {/* 오른쪽 사이드바 - 호가창 & 매매 패널 */}
+            {/* 오른쪽 사이드바 - 호가창, 예약주문, 알림 & 매매 패널 */}
             <div className="col-span-12 lg:col-span-3 space-y-4">
               <OrderBook stock={selectedStock} />
+              <PendingOrders 
+                stock={selectedStock} 
+                assetType={assetType}
+                onOrderCreated={handleRefresh}
+              />
+              <PriceAlerts 
+                stock={selectedStock} 
+                assetType={assetType}
+              />
               <TradingPanel 
                 stock={selectedStock} 
                 onOrderComplete={handleOrderComplete}
@@ -755,11 +773,13 @@ export default function TradingPage() {
   const clientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
   
   return (
-    <AuthProvider>
-      <AdProvider clientId={clientId}>
-        <DisclaimerModal />
-        <MainContent />
-      </AdProvider>
-    </AuthProvider>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <AuthProvider>
+        <AdProvider clientId={clientId}>
+          <DisclaimerModal />
+          <MainContent />
+        </AdProvider>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }

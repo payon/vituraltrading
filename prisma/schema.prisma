@@ -45,6 +45,8 @@ model User {
   accounts          Account[]
   sessions          Session[]
   watchlist         Watchlist[]
+  pendingOrders     PendingOrder[]
+  priceAlerts       PriceAlert[]
 }
 
 /// NextAuth Account (OAuth 등)
@@ -463,4 +465,92 @@ model Watchlist {
   @@unique([userId, symbol, assetType])
   @@index([userId])
   @@index([symbol])
+}
+
+// ============================================
+// 예약 주문 모델
+// ============================================
+
+/// 예약 주문 (지정가)
+model PendingOrder {
+  id          String          @id @default(cuid())
+  userId      String
+  user        User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 종목 정보
+  assetType   AssetType
+  symbol      String
+  name        String
+  
+  // 주문 정보
+  orderType   TransactionType // BUY 또는 SELL
+  price       Float           // 목표 가격
+  quantity    Float           // 주문 수량
+  totalAmount Float           // 총 주문 금액
+  
+  // 상태
+  status      OrderStatus     @default(PENDING)
+  
+  // 유효기간
+  expiresAt   DateTime?       // 만료일 (null이면 무제한)
+  
+  // 체결 정보
+  executedAt  DateTime?       // 체결일
+  executedPrice Float?        // 체결 가격
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([symbol])
+  @@index([status])
+}
+
+/// 주문 상태
+enum OrderStatus {
+  PENDING     // 대기중
+  EXECUTED    // 체결됨
+  CANCELLED   // 취소됨
+  EXPIRED     // 만료됨
+}
+
+// ============================================
+// 가격 알림 모델
+// ============================================
+
+/// 가격 알림
+model PriceAlert {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 종목 정보
+  assetType   AssetType
+  symbol      String
+  name        String
+  
+  // 알림 조건
+  targetPrice Float     // 목표 가격
+  condition   AlertCondition  // ABOVE(이상) 또는 BELOW(이하)
+  
+  // 상태
+  triggered   Boolean   @default(false)  // 알림 발생 여부
+  triggeredAt DateTime? // 알림 발생 시간
+  
+  // 알림 방법
+  pushEnabled Boolean   @default(true)   // 푸시 알림
+  emailEnabled Boolean  @default(false)  // 이메일 알림
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([userId])
+  @@index([symbol])
+  @@index([triggered])
+}
+
+/// 알림 조건
+enum AlertCondition {
+  ABOVE   // 목표가 이상
+  BELOW   // 목표가 이하
 }
