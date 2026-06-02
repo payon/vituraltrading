@@ -52,7 +52,8 @@ export const authOptions: NextAuthOptions = {
   // JWT 세션 사용 - Prisma Adapter 불필요
   session: {
     strategy: 'jwt',
-    maxAge: 30 * 24 * 60 * 60, // 30 days
+    maxAge: 24 * 60 * 60, // 24시간 (보안 강화)
+    updateAge: 60 * 60,   // 1시간마다 세션 갱신
   },
   pages: {
     signIn: '/auth/signin',
@@ -145,6 +146,20 @@ export const authOptions: NextAuthOptions = {
     },
     async signOut({ token }) {
       console.log(`User signed out: ${token?.email}`);
+    },
+  },
+  // 보안 설정
+  secret: process.env.NEXTAUTH_SECRET,
+  useSecureCookies: process.env.NODE_ENV === 'production',
+  cookies: {
+    sessionToken: {
+      name: `${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}next-auth.session-token`,
+      options: {
+        httpOnly: true,
+        sameSite: 'lax',
+        path: '/',
+        secure: process.env.NODE_ENV === 'production',
+      },
     },
   },
   debug: process.env.NODE_ENV === 'development',
