@@ -16,6 +16,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -31,8 +37,10 @@ import {
   Moon,
   Monitor,
   Check,
+  Shield,
 } from 'lucide-react';
 import { AuthModal } from './AuthModal';
+import { SecuritySettings } from '@/components/trading/security-settings';
 import { useTheme } from 'next-themes';
 
 interface UserInfo {
@@ -52,6 +60,7 @@ export function UserMenu({ onSignIn }: UserMenuProps) {
   const [user, setUser] = useState<UserInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [showSecurityDialog, setShowSecurityDialog] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -202,6 +211,10 @@ export function UserMenu({ onSignIn }: UserMenuProps) {
             <Settings className="mr-2 h-4 w-4" />
             설정
           </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => setShowSecurityDialog(true)}>
+            <Shield className="mr-2 h-4 w-4" />
+            보안 설정
+          </DropdownMenuItem>
 
           <DropdownMenuSeparator />
 
@@ -244,6 +257,19 @@ export function UserMenu({ onSignIn }: UserMenuProps) {
       </DropdownMenu>
 
       <AuthModal open={showAuthModal} onOpenChange={setShowAuthModal} />
+
+      {/* 보안 설정 다이얼로그 */}
+      <Dialog open={showSecurityDialog} onOpenChange={setShowSecurityDialog}>
+        <DialogContent className="max-w-md max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="flex items-center gap-2">
+              <Shield className="w-5 h-5" />
+              보안 설정
+            </DialogTitle>
+          </DialogHeader>
+          <SecuritySettings />
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

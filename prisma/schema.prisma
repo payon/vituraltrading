@@ -47,6 +47,7 @@ model User {
   watchlist         Watchlist[]
   pendingOrders     PendingOrder[]
   priceAlerts       PriceAlert[]
+  auditLogs         AuditLog[]
 }
 
 /// NextAuth Account (OAuth 등)
@@ -553,4 +554,51 @@ model PriceAlert {
 enum AlertCondition {
   ABOVE   // 목표가 이상
   BELOW   // 목표가 이하
+}
+
+// ============================================
+// 감사 로그 모델
+// ============================================
+
+/// 감사 로그 액션 타입
+enum AuditAction {
+  LOGIN           // 로그인
+  LOGOUT          // 로그아웃
+  REGISTER        // 회원가입
+  PASSWORD_CHANGE // 비밀번호 변경
+  PROFILE_UPDATE  // 프로필 수정
+  TRADE_BUY       // 매수
+  TRADE_SELL      // 매도
+  ACCOUNT_RESET   // 계좌 초기화
+  SETTINGS_CHANGE // 설정 변경
+  API_ACCESS      // API 접근
+  SECURITY_ALERT  // 보안 알림
+}
+
+/// 감사 로그
+model AuditLog {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 액션 정보
+  action      AuditAction
+  description String      // 상세 설명
+  
+  // 추가 정보 (JSON)
+  metadata    String?     // 추가 메타데이터
+  
+  // 요청 정보
+  ipAddress   String?     // IP 주소
+  userAgent   String?     // 사용자 에이전트
+  
+  // 결과
+  success     Boolean     @default(true)
+  errorMessage String?    // 실패 시 에러 메시지
+  
+  createdAt DateTime @default(now())
+  
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
 }
