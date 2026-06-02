@@ -1,12 +1,21 @@
 'use client';
 
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useSyncExternalStore } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { COLORS } from '@/lib/trading';
 import { Activity, TrendingUp, TrendingDown, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+// Client-only rendering helper
+const emptySubscribe = () => () => {};
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
+
+function useIsClient() {
+  return useSyncExternalStore(emptySubscribe, getSnapshot, getServerSnapshot);
+}
 
 interface Trade {
   id: string;
@@ -18,8 +27,8 @@ interface Trade {
   tradedAt: string;
 }
 
-// Generate realistic mock trades for 2026
-const generateMockTrades = (): Trade[] => {
+// Pre-generated deterministic mock trades for SSR consistency
+const getInitialTrades = (): Trade[] => {
   const stocks = [
     { symbol: '005930', name: '삼성전자' },
     { symbol: '000660', name: 'SK하이닉스' },
@@ -33,32 +42,32 @@ const generateMockTrades = (): Trade[] => {
     { symbol: '035720', name: '카카오' },
   ];
 
+  // Use fixed seed for deterministic results
+  const baseTime = new Date(2026, 0, 15, 14, 30, 0).getTime();
   const trades: Trade[] = [];
-  const now = new Date(2026, 0, 15, 14, 30, 0); // 2026년 1월 15일 오후 2시 30분
-
-  // Generate 30 trades over the past 5 minutes
+  
   for (let i = 0; i < 30; i++) {
-    const stock = stocks[Math.floor(Math.random() * stocks.length)];
-    const minutesAgo = Math.floor(Math.random() * 5);
-    const secondsAgo = Math.floor(Math.random() * 60);
-    const tradedAt = new Date(now.getTime() - minutesAgo * 60000 - secondsAgo * 1000);
-
-    // Realistic price ranges for Korean stocks
-    const basePrice = Math.floor(Math.random() * 500000) + 50000;
-    const priceVariation = Math.floor(Math.random() * 1000) + 100;
+    // Deterministic values based on index
+    const stockIndex = i % stocks.length;
+    const minutesAgo = i % 5;
+    const secondsAgo = (i * 2) % 60;
+    const tradedAt = new Date(baseTime - minutesAgo * 60000 - secondsAgo * 1000);
+    
+    // Deterministic prices
+    const basePrice = 50000 + (i * 15000) % 450000;
+    const priceVariation = (i * 100) % 1000;
 
     trades.push({
-      id: `trade-${i}-${Date.now()}`,
-      symbol: stock.symbol,
-      name: stock.name,
+      id: `trade-${i}`,
+      symbol: stocks[stockIndex].symbol,
+      name: stocks[stockIndex].name,
       price: basePrice + priceVariation,
-      quantity: Math.floor(Math.random() * 100) + 1,
-      tradeType: Math.random() > 0.5 ? 'BUY' : 'SELL',
+      quantity: ((i * 7) % 100) + 1,
+      tradeType: i % 2 === 0 ? 'BUY' : 'SELL',
       tradedAt: tradedAt.toISOString(),
     });
   }
 
-  // Sort by tradedAt descending (newest first)
   return trades.sort((a, b) => new Date(b.tradedAt).getTime() - new Date(a.tradedAt).getTime());
 };
 
@@ -162,40 +171,44 @@ function TradeItem({ trade, isNew }: TradeItemProps) {
 }
 
 export function TradeHistory() {
-  // Initialize with mock data using lazy initialization
-  const [trades, setTrades] = useState<Trade[]>(() => generateMockTrades());
+  // Initialize with deterministic trades for SSR consistency
+  const [trades, setTrades] = useState<Trade[]>(getInitialTrades);
   const [newTradeIds, setNewTradeIds] = useState<Set<string>>(new Set());
+  const isClient = useIsClient();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const tradeCounterRef = useRef(100);
 
-  // Simulate new trades coming in
+  // Simulate new trades coming in (only on client)
   useEffect(() => {
-    const interval = setInterval(() => {
-      const stocks = [
-        { symbol: '005930', name: '삼성전자' },
-        { symbol: '000660', name: 'SK하이닉스' },
-        { symbol: '373220', name: 'LG에너지솔루션' },
-        { symbol: '207940', name: '삼성바이오로직스' },
-        { symbol: '005380', name: '현대차' },
-        { symbol: '035420', name: 'NAVER' },
-      ];
+    if (!isClient) return;
+    
+    const stocks = [
+      { symbol: '005930', name: '삼성전자' },
+      { symbol: '000660', name: 'SK하이닉스' },
+      { symbol: '373220', name: 'LG에너지솔루션' },
+      { symbol: '207940', name: '삼성바이오로직스' },
+      { symbol: '005380', name: '현대차' },
+      { symbol: '035420', name: 'NAVER' },
+    ];
 
-      const stock = stocks[Math.floor(Math.random() * stocks.length)];
+    const interval = setInterval(() => {
+      const stockIndex = tradeCounterRef.current % stocks.length;
+      const stock = stocks[stockIndex];
       const now = new Date(2026, 0, 15, 14, 30, 0);
 
       const newTrade: Trade = {
-        id: `trade-new-${Date.now()}`,
+        id: `trade-new-${tradeCounterRef.current++}`,
         symbol: stock.symbol,
         name: stock.name,
-        price: Math.floor(Math.random() * 500000) + 50000,
-        quantity: Math.floor(Math.random() * 100) + 1,
-        tradeType: Math.random() > 0.5 ? 'BUY' : 'SELL',
+        price: 50000 + (tradeCounterRef.current * 7500) % 450000,
+        quantity: ((tradeCounterRef.current * 13) % 100) + 1,
+        tradeType: tradeCounterRef.current % 2 === 0 ? 'BUY' : 'SELL',
         tradedAt: now.toISOString(),
       };
 
-      setTrades((prev) => [newTrade, ...prev].slice(0, 100)); // Keep max 100 trades
+      setTrades((prev) => [newTrade, ...prev].slice(0, 100));
       setNewTradeIds((prev) => new Set([...prev, newTrade.id]));
 
-      // Remove the "new" animation class after animation completes
       setTimeout(() => {
         setNewTradeIds((prev) => {
           const next = new Set(prev);
@@ -203,10 +216,10 @@ export function TradeHistory() {
           return next;
         });
       }, 2000);
-    }, 3000); // New trade every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
 
   // Auto-scroll to top when new trade arrives
   useEffect(() => {
@@ -297,7 +310,7 @@ export function TradeHistory() {
 
           {trades.length === 0 && (
             <div className="flex flex-col items-center justify-center h-[200px] text-muted-foreground">
-              <Activity className="w-12 h-12 mb-2 opacity-50" />
+              <Activity className="w-8 h-8 mb-2 opacity-50" />
               <p>체결 내역이 없습니다</p>
             </div>
           )}
