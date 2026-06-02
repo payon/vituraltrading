@@ -59,6 +59,12 @@ export function PriceAlerts({ stock, assetType }: PriceAlertsProps) {
   const [targetPrice, setTargetPrice] = useState('');
   const [condition, setCondition] = useState<'ABOVE' | 'BELOW'>('ABOVE');
 
+  // 안전한 가격 포맷팅
+  const formatPrice = (price: number | undefined): string => {
+    if (price === undefined || price === null || isNaN(price)) return '-';
+    return price.toLocaleString('ko-KR');
+  };
+
   // 알림 목록 로드
   useEffect(() => {
     fetchAlerts();
@@ -214,7 +220,7 @@ export function PriceAlerts({ stock, assetType }: PriceAlertsProps) {
                     <p className="text-sm text-muted-foreground">{stock?.symbol}</p>
                   </div>
                   <div className="ml-auto text-right">
-                    <p className="font-medium">{stock?.price.toLocaleString()}원</p>
+                    <p className="font-medium">{formatPrice(stock?.price)}원</p>
                   </div>
                 </div>
 
@@ -254,7 +260,7 @@ export function PriceAlerts({ stock, assetType }: PriceAlertsProps) {
                     placeholder="목표 가격 입력"
                   />
                   <p className="text-xs text-muted-foreground">
-                    현재가: {stock?.price.toLocaleString()}원
+                    현재가: {formatPrice(stock?.price)}원
                   </p>
                 </div>
 
